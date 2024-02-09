@@ -21,7 +21,7 @@ DB_PASSWORD="<password>"
 
 ## Installation
 
-1. If you do not have pnpm, run `npm i -g pnpm`.
+1. If you do not have pnpm, run `npm i -g pnpm@7`.
 
 2. Install Dependencies using `pnpm install`.
 
