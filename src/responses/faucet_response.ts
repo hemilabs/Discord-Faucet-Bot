@@ -13,7 +13,7 @@ const { getTimer, setTimer } = require("../utils/handleRateLimiting");
 const transfer = require("../utils/transfer");
 
 module.exports = async (keyv: Keyv, interaction: ChatInputCommandInteraction): Promise<void> => {
-	// Initial Responce to client
+	// Initial Response to client
 	await interaction.reply({ content: "🤖 Mining....", fetchReply: true });
 
 	try {

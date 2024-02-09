@@ -23,9 +23,9 @@ DB_PASSWORD="<password>"
 
 1. If you do not have pnpm, run `npm i -g pnpm`.
 
-2. Install Dependancies using `pnpm install`. 
+2. Install Dependencies using `pnpm install`.
 
-_Optionally you can update the dependancies using `pnpm update`._
+    _Optionally you can update the dependencies using `pnpm update`._
 
 3. Fill in the config and run the bot : `pnpm start:dev`
 
@@ -45,7 +45,7 @@ These are the supported Networks and Tokens as of yet. Feel free to do PRs to ad
 
 ## Adding Networks or Tokens
 
-Adding Networks or Tokens are fairly straighforward.
+Adding Networks or Tokens are fairly straightforward.
 
 1. Open up the `config.json`.
 2. Add a network Object in the `networks` field

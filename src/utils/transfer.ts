@@ -29,7 +29,7 @@ module.exports = async (
 	//* Native Transfer
 	if (!tokenName) {
 		const nonce = await provider.getTransactionCount(stats.walletAddress); // Get the latest nonce
-		let txObj: ethers.providers.TransactionRequest; // Holds the Transation Object
+		let txObj: ethers.providers.TransactionRequest; // Holds the Transaction Object
 
 		if (networkName == "mumbai") {
 			//* Polygon Network

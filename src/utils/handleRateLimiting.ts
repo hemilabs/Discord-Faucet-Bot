@@ -10,7 +10,7 @@ import { NonceCoolDown, Source, UserCoolDown } from "../database";
 
 const { bypassRoles } = require("../config/config.json");
 
-// Nonce is the timer between transactions to prevent the same one from occuring
+// Nonce is the timer between transactions to prevent the same one from occurring
 module.exports = {
 	getTimer: async (
 		interaction: any,
@@ -58,7 +58,7 @@ module.exports = {
 					network,
 				});
 
-				// If the user exists, return the value if it's less than the cooldown Times
+				// If the user exists, return the value if it's less than the cool-down Times
 				if (user) {
 					const lastReqTime = user.unlockTime.getTime();
 					if (Date.now() - lastReqTime < stats.coolDownTime) {
