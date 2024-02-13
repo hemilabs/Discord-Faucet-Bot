@@ -14,17 +14,17 @@ module.exports = {
 			client.user.setStatus("online");
 
 			// Morning Print of Waking Up
-			const logchannel = client.channels.cache.get(channels.log) as TextChannel;
-			logchannel.send(
-				`[LOGIN/RESTART]\n${new Date(Date.now()).toUTCString()}\nFaucet Bot Woken`
+			const logChannel = client.channels.cache.get(channels.log) as TextChannel;
+			logChannel.send(
+				`[LOGIN/RESTART]\n${new Date(Date.now()).toUTCString()}\nFaucet bot ready.`
 			);
 
 			console.log(`Ready! Logged in as ${client.user.tag}`);
 		} catch (error) {
-			console.error(`Error Starting BOT in ready : ${error}`);
-			const errorchannel = client.channels.cache.get(channels.error) as TextChannel;
-			errorchannel.send(
-				`[ERROR]\n${new Date(Date.now()).toUTCString()}\nWaking BOT\n${error}`
+			console.error(`Error starting bot: ${error}`);
+			const errorChannel = client.channels.cache.get(channels.error) as TextChannel;
+			errorChannel.send(
+				`[ERROR]\n${new Date(Date.now()).toUTCString()}\nStarting bot\n${error}`
 			);
 		}
 	},

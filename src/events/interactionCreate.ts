@@ -14,7 +14,7 @@ module.exports = {
 	async execute(keyv: Keyv, client: ExtendedClient, interaction: Interaction) {
 		try {
 			// Gets the Log Channel
-			const errorchannel = client.channels.cache.get(channels.error) as TextChannel;
+			const errorChannel = client.channels.cache.get(channels.error) as TextChannel;
 
 			//* Chat Command Interactions
 			if (interaction.isChatInputCommand()) {
@@ -35,7 +35,7 @@ module.exports = {
 						content: "👀 This Command does not exist!",
 						ephemeral: true,
 					});
-					errorchannel.send(
+					errorChannel.send(
 						`[ERROR]\n${new Date(
 							Date.now()
 						).toUTCString()}\nInvalid Chat Command Passed\nBy : ${
@@ -88,7 +88,7 @@ module.exports = {
 			}
 			//* Different kind of interaction
 			else {
-				errorchannel.send(
+				errorChannel.send(
 					`[ERROR]\n${new Date(
 						Date.now()
 					).toUTCString()}\nDifferent Kind of Interaction\n${interaction}`
@@ -96,10 +96,10 @@ module.exports = {
 				return;
 			}
 		} catch (error) {
-			const errorchannel = client.channels.cache.get(channels.error) as TextChannel;
-			console.error(`Error Handling Interaction : ${error}`);
-			errorchannel.send(
-				`[ERROR]\n${new Date(Date.now()).toUTCString()}\nInteraction Handling\n${error}`
+			const errorChannel = client.channels.cache.get(channels.error) as TextChannel;
+			console.error(`Error handling interaction: ${error}`);
+			errorChannel.send(
+				`[ERROR]\n${new Date(Date.now()).toUTCString()}\nHandling interaction\n${error}`
 			);
 		}
 	},
