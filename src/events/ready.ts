@@ -1,6 +1,6 @@
 // Log Printing and setting Discord Presence when the BOT wakes
 
-import { ActivityType, TextChannel } from "discord.js";
+import { TextChannel } from "discord.js";
 
 import { ExtendedClient } from "../classes/ExtendedClient";
 import { channels } from "../config/config.json";
@@ -11,9 +11,6 @@ module.exports = {
 	async execute(client: ExtendedClient) {
 		try {
 			// Setting Status of Bot
-			client.user.setActivity("LearnWeb3DAO", {
-				type: ActivityType.Watching,
-			});
 			client.user.setStatus("online");
 
 			// Morning Print of Waking Up

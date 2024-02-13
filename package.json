@@ -31,9 +31,7 @@
 	"license": "MIT",
 	"keywords": [
 		"faucet",
-		"bot",
-		"learnweb3dao",
-		"learnweb3"
+		"bot"
 	],
 	"dependencies": {
 		"@celo-tools/celo-ethers-wrapper": "^0.3.0",
