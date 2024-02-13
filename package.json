@@ -14,20 +14,19 @@
 		"format:fix": "prettier --write .",
 		"start": "ts-node src/index.ts",
 		"start:dev": "ts-node-dev src/index.ts",
-		"start:prod": "tsc && node dist/deploy-commands.js && node dist/index.js",
+		"start:prod": "tsc && node dist/assign-commands.js && node dist/index.js",
 		"build": "tsc",
-		"bot:addcommands": "ts-node src/deploy-commands.ts",
+		"bot:assigncommands": "ts-node src/assign-commands.ts",
 		"bot:deletecommands": "ts-node src/delete-commands.ts"
 	},
 	"repository": {
-    "type": "git",
-    "url": "git+https://github.com/yanukadeneth99/Discord-Faucet-Bot.git"
-  },
+		"type": "git",
+		"url": "git+https://github.com/yanukadeneth99/Discord-Faucet-Bot.git"
+	},
 	"bugs": {
-    "url": "https://github.com/yanukadeneth99/Discord-Faucet-Bot/issues"
-  },
-  "homepage": "https://github.com/yanukadeneth99/Discord-Faucet-Bot#readme",
-
+		"url": "https://github.com/yanukadeneth99/Discord-Faucet-Bot/issues"
+	},
+	"homepage": "https://github.com/yanukadeneth99/Discord-Faucet-Bot#readme",
 	"license": "MIT",
 	"keywords": [
 		"faucet",

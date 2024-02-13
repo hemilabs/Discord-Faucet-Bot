@@ -1,6 +1,6 @@
 /* 
 * Users can use to claim free eth daily per account from the passed network and token
-If you change this, make sure to run `pnpm bot:deletecommands && pnpm bot:addcommands`
+If you change this, make sure to run `pnpm bot:deletecommands && pnpm bot:assigncommands`
 ! Rate limited
 */
 

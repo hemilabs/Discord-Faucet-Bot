@@ -1,7 +1,7 @@
 /* 
 * Get the Faucet Address balance of the Passed Network and token. If the token is not passed then the default native-currency is used
 ! ADMINS ONLY
-If you change this, make sure to run `pnpm bot:deletecommands && pnpm bot:addcommands`
+If you change this, make sure to run `pnpm bot:deletecommands && pnpm bot:assigncommands`
 */
 
 import { PermissionFlagsBits, SlashCommandBuilder } from "discord.js";
