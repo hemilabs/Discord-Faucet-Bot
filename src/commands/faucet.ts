@@ -6,7 +6,7 @@ If you change this, make sure to run `pnpm bot:deletecommands && pnpm bot:addcom
 
 import { PermissionFlagsBits, SlashCommandBuilder } from "discord.js";
 
-import { networks, tokens } from "../config/config.json";
+import { networks } from "../config/config.json";
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -31,18 +31,4 @@ module.exports = {
 			});
 			return option;
 		})
-		.addStringOption(option => {
-			option
-				.setName("token")
-				.setDescription("Select the token if applicable")
-				.setRequired(false);
-
-			tokens.forEach(token => {
-				option.addChoices({
-					name: `${token.name.toUpperCase()}`,
-					value: `${token.name.toLowerCase()}`,
-				});
-			});
-			return option;
-		}),
 };
