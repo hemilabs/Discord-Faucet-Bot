@@ -10,21 +10,18 @@ import { networks } from "../config/config.json";
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName("balance")
-		.setDescription(
-			"Get the balance remaining of the Faucet depending on the passed network and token"
-		)
+		.setName("faucet-balance")
+		.setDescription("Get the balance of the Faucet")
 		.setDMPermission(false)
 		.setDefaultMemberPermissions(PermissionFlagsBits.BanMembers)
 		.addStringOption(option => {
 			option.setName("network").setDescription("Select the network").setRequired(true);
-
 			networks.forEach(network => {
 				option.addChoices({
-					name: `${network.name.toUpperCase()}`,
-					value: `${network.name.toLowerCase()}`,
+					name: `${network.name}`,
+					value: `${network.name}`,
 				});
 			});
 			return option;
-		})
+		}),
 };

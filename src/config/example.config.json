@@ -14,19 +14,19 @@
 			"name": "goerli",
 			"nativeCurrency": "eth",
 			"ALCHEMY_URL": "https://rpc-url/xxxx",
-			"scan": "https://goerli.etherscan.io/tx/"
+			"scan": "https://goerli.etherscan.io"
 		},
 		{
 			"name": "alfajores",
 			"nativeCurrency": "celo",
 			"RPC_URL": "https://alfajores-forno.celo-testnet.org",
-			"scan": "https://alfajores.celoscan.io/tx/"
+			"scan": "https://alfajores.celoscan.io"
 		},
 		{
 			"name": "mumbai",
 			"nativeCurrency": "matic",
 			"ALCHEMY_URL": "https://rpc-url/xxxx",
-			"scan": "https://mumbai.polygonscan.com/tx/"
+			"scan": "https://mumbai.polygonscan.com"
 		}
 	],
 	"tokens": [
