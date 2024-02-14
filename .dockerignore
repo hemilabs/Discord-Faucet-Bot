@@ -1,0 +1,7 @@
+.*.json
+.*ignore
+.env
+.git
+/dist
+/node_modules
+Dockerfile

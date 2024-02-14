@@ -29,6 +29,21 @@ DB_PASSWORD="<password>"
 
 3. Fill in the config and run the bot : `pnpm start:dev`
 
+### Running with Docker
+
+The bot can also be run with Docker:
+
+```sh
+docker built --tag discord-bot-faucet .
+docker run --detach --env BOT_TOKEN --env WALLET_PRIVATE_KEY discord-bot-faucet
+```
+
+Alternatively, it is also possible to read the environment variables from the `.env` file:
+
+```sh
+docker run --detach --env-file=.env discord-bot-faucet
+```
+
 ## Networks
 
 These are the supported Networks and Tokens as of yet. Feel free to do PRs to add any other testnet networks or tokens!
@@ -52,10 +67,10 @@ Adding Networks or Tokens are fairly straightforward.
    ex :
     ```json
     {
-     "name": "networkName",
-     "nativeCurrency": "kool",
-     "ALCHEMY_URL": "https://rpc-url/xxx",
-     "scan": "https://myscan.kool.io/tx/"
+    	"name": "networkName",
+    	"nativeCurrency": "kool",
+    	"ALCHEMY_URL": "https://rpc-url/xxx",
+    	"scan": "https://myscan.kool.io/tx/"
     }
     ```
 3. That's literally it!
