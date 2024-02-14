@@ -1,7 +1,6 @@
 //* Returns a transaction object which can be used to transfer to the passed address
 // Pass the token Name and Network Name if the transaction is meant to be using a ERC20 token
 
-import { CeloWallet } from "@celo-tools/celo-ethers-wrapper";
 import * as dotenv from "dotenv";
 import { ethers } from "ethers";
 
@@ -11,17 +10,12 @@ dotenv.config();
 
 module.exports = async (
 	provider: ethers.providers.JsonRpcProvider,
-	usrAddress: string,
-	networkName: string
+	usrAddress: string
 ): Promise<ethers.providers.TransactionResponse> => {
 	// Create a wallet instance
 	let wallet: ethers.Wallet;
 
-	if (networkName == "celo") {
-		wallet = new CeloWallet(process.env.WALLET_PRIVATE_KEY, provider);
-	} else {
-		wallet = new ethers.Wallet(process.env.WALLET_PRIVATE_KEY, provider);
-	}
+	wallet = new ethers.Wallet(process.env.WALLET_PRIVATE_KEY, provider);
 
 	if (!wallet) throw new Error("Wallet Construction Failed!");
 

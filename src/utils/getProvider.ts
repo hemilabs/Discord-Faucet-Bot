@@ -1,6 +1,5 @@
 //* Returns the Provider or throws an Error if not found
 
-import { CeloProvider } from "@celo-tools/celo-ethers-wrapper";
 import { ethers } from "ethers";
 
 import { networks as rawNetworks } from "../config/config.json";
@@ -30,11 +29,6 @@ module.exports = async (networkName: string): Promise<ethers.providers.JsonRpcPr
 		throw new Error("Network RPC Not Setup!");
 	}
 
-	if (networkName == "celo") {
-		const provider = new CeloProvider(networkRPC);
-		await provider.ready;
-		return provider;
-	}
 	const provider = new ethers.providers.JsonRpcProvider(networkRPC);
 	await provider.ready;
 	return provider;
