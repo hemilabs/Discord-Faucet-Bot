@@ -6,7 +6,7 @@ If you change this, make sure to run `pnpm bot:deletecommands && pnpm bot:assign
 
 import { PermissionFlagsBits, SlashCommandBuilder } from "discord.js";
 
-import { networks } from "../config/config.json";
+// import { networks } from "../config/config.json";
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -14,14 +14,14 @@ module.exports = {
 		.setDescription("Get the balance of the Faucet")
 		.setDMPermission(false)
 		.setDefaultMemberPermissions(PermissionFlagsBits.BanMembers)
-		.addStringOption(option => {
-			option.setName("network").setDescription("Select the network").setRequired(true);
-			networks.forEach(network => {
-				option.addChoices({
-					name: `${network.name}`,
-					value: `${network.name}`,
-				});
-			});
-			return option;
-		}),
+		// .addStringOption(option => {
+		// 	option.setName("network").setDescription("Select the network").setRequired(true);
+		// 	networks.forEach(network => {
+		// 		option.addChoices({
+		// 			name: `${network.name}`,
+		// 			value: `${network.name}`,
+		// 		});
+		// 	});
+		// 	return option;
+		// }),
 };

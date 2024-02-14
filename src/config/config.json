@@ -14,12 +14,6 @@
 			"nativeCurrency": "ETH",
 			"RPC_URL": "http://external-testnet.bvmdev.cc:18546",
 			"scan": "http://external-testnet.bvmdev.cc"
-		},
-		{
-			"name": "Sepolia",
-			"nativeCurrency": "ETH",
-			"RPC_URL": "https://ethereum-sepolia.publicnode.com",
-			"scan": "https://sepolia.etherscan.io"
 		}
 	],
 	"stats": {

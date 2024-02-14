@@ -4,7 +4,7 @@ import { ChatInputCommandInteraction, TextChannel } from "discord.js";
 import { ethers } from "ethers";
 import Keyv from "keyv";
 
-import { channels, stats } from "../config/config.json";
+import { channels, networks, stats } from "../config/config.json";
 
 const getBalance = require("../utils/getBalance");
 const getExplorerUrl = require("../utils/getExplorerUrl");
@@ -22,7 +22,7 @@ module.exports = async (keyv: Keyv, interaction: ChatInputCommandInteraction): P
 
 		// Get the Network,token and address from user input
 		const usrAddress = interaction.options.getString("address");
-		const networkName = interaction.options.getString("network");
+		const networkName = interaction.options.getString("network") ?? networks[0].name;
 
 		// Check whether address is valid
 		if (!ethers.utils.isAddress(usrAddress)) {
