@@ -18,7 +18,7 @@
 	],
 	"stats": {
 		"walletAddress": "0x687468BdCaCf6a6e15DE5B0230AC66A6CFA5EfF7",
-		"dailyEth": 0.1,
+		"dailyEth": 0.05,
 		"database": "keyv",
 		"maxFee": 95000000000,
 		"coolDownTime": 86400000,
