@@ -6,6 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 import client from "./client"; // Get Client
+import { stats } from "./config/config.json";
 import { InitializeDb } from "./database";
 
 dotenv.config();
@@ -45,11 +46,13 @@ for (const file of commandFiles) {
 }
 
 // Database Connection
-InitializeDb();
+if (stats.database === "pg") {
+	InitializeDb();
+}
 
 // Login to Bot with token
 try {
 	client.login(process.env.BOT_TOKEN);
 } catch (error) {
-	console.error(`Error login to BOT at index : ${error}`);
+	console.error(`Error logging in at index: ${error}`);
 }
