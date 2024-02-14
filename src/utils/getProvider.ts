@@ -3,7 +3,15 @@
 import { CeloProvider } from "@celo-tools/celo-ethers-wrapper";
 import { ethers } from "ethers";
 
-import { networks } from "../config/config.json";
+import { networks as rawNetworks } from "../config/config.json";
+
+const networks = rawNetworks as {
+	name: string;
+	nativeCurrency: string;
+	ALCHEMY_URL?: string;
+	RPC_URL?: string;
+	scan: string;
+}[];
 
 // TODO : Use `DefaultProvider` so that the Bot uses Multiple RPC Nodes when possible
 
