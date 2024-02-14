@@ -21,7 +21,7 @@
 		"dailyEth": 0.1,
 		"database": "keyv",
 		"maxFee": 95000000000,
-		"coolDownTime": 120000,
+		"coolDownTime": 86400000,
 		"globalCoolDown": 60000
 	},
 	"database": {

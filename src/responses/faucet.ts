@@ -56,8 +56,8 @@ module.exports = async (keyv: Keyv, interaction: ChatInputCommandInteraction): P
 		// Rate Limiting for non Admins
 		const limit = (await getTimer(interaction, networkName, false, keyv)) as number | undefined;
 		if (limit) {
-			const timeLeft = Math.floor((stats.coolDownTime - (Date.now() - limit)) / 1000);
-			await interaction.editReply(`😎 Cool people waits for ${timeLeft}s more.`);
+			const timeLeft = Math.ceil((stats.coolDownTime - (Date.now() - limit)) / 3600000);
+			await interaction.editReply(`😎 Cool people wait ${timeLeft} hours to ask for more.`);
 			return;
 		} else {
 			await setTimer(interaction, networkName, true, keyv);
