@@ -1,0 +1,38 @@
+{
+	"bot": {
+		"clientId": "1205618910020370563",
+		"guildId": "1202677849887080508"
+	},
+	"channels": {
+		"log": "1207059268650672138",
+		"error": "1207059268650672138"
+	},
+	"bypassRoles": ["0000000000000"],
+	"networks": [
+		{
+			"name": "Hemi Testnet",
+			"nativeCurrency": "ETH",
+			"RPC_URL": "http://external-testnet.bvmdev.cc:18546",
+			"scan": "http://external-testnet.bvmdev.cc"
+		},
+		{
+			"name": "Sepolia",
+			"nativeCurrency": "ETH",
+			"RPC_URL": "https://ethereum-sepolia.publicnode.com",
+			"scan": "https://sepolia.etherscan.io"
+		}
+	],
+	"stats": {
+		"walletAddress": "0x687468BdCaCf6a6e15DE5B0230AC66A6CFA5EfF7",
+		"dailyEth": 0.1,
+		"database": "keyv",
+		"maxFee": 95000000000,
+		"coolDownTime": 120000,
+		"globalCoolDown": 60000
+	},
+	"database": {
+		"host": "localhost",
+		"port": 9000,
+		"database": "db"
+	}
+}
