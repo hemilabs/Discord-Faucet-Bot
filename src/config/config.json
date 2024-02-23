@@ -12,8 +12,8 @@
 		{
 			"name": "Hemi Testnet",
 			"nativeCurrency": "ETH",
-			"RPC_URL": "http://external-testnet.bvmdev.cc:18546",
-			"scan": "http://external-testnet.bvmdev.cc"
+			"RPC_URL": "https://testnet.rpc.hemi.network/rpc",
+			"scan": "https://testnet.explorer.hemi.network"
 		}
 	],
 	"stats": {
