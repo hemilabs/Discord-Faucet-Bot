@@ -11,7 +11,7 @@
 	"networks": [
 		{
 			"name": "Hemi Testnet",
-			"nativeCurrency": "ETH",
+			"nativeCurrency": "thETH",
 			"RPC_URL": "https://testnet.rpc.hemi.network/rpc",
 			"scan": "https://testnet.explorer.hemi.network"
 		}
