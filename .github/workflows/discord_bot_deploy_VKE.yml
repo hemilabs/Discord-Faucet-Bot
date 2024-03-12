@@ -9,9 +9,9 @@
   jobs:
 
     build-push-deploy:
-      environment: discord  
+
       env:
-        namespace: discords
+        namespace: discord
 
       name: Build Push & Deploy to VKE
       runs-on: ubuntu-latest
@@ -58,24 +58,29 @@
         - name: Create K8s Secrets
           run: |
             if kubectl get secret discord-bot-secrets --namespace=${{ env.namespace }}; then
-              kubectl delete secret discord-bot-secrets --namespace=${{ env.namespace }}
+              echo "Bot Secret already exists"
+            else
+              echo "Creating Bot Secret"
+              kubectl create secret generic discord-bot-secrets \
+              --from-literal=BOT_TOKEN=${{ secrets.BOT_TOKEN }} \
+              --from-literal=WALLET_PRIVATE_KEY=${{ secrets.WALLET_PRIVATE_KEY }} \
+              --namespace=${{ env.namespace }}
             fi
-            kubectl create secret generic discord-bot-secrets \
-            --from-literal=BOT_TOKEN=${{ secrets.BOT_TOKEN }} \
-            --from-literal=WALLET_PRIVATE_KEY=${{ secrets.WALLET_PRIVATE_KEY }} \
-            --namespace=${{ env.namespace }}
+            echo "Checking Dockerhub Secret"
 
         - name: Dockerhub Secrets
           run: |
             if kubectl get secret dockerhub-secret --namespace=${{ env.namespace }}; then
-              kubectl delete secret dockerhub-secret --namespace=${{ env.namespace }}
-            fi
+              echo "Dockerhub Secret already exists"
+            else
+              echo "Creating Dockerhub Secret"
               kubectl create secret docker-registry dockerhub-secret \
               --docker-server=https://index.docker.io/v1/ \
               --docker-username=${{ secrets.DOCKER_USERNAME }} \
               --docker-password=${{ secrets.DOCKER_PASSWORD }} \
               --docker-email=${{ secrets.DOCKER_EMAIL }} \
               --namespace=${{ env.namespace }}
+            fi
 
         - name: Update Image Tag in deployment
           run: |
