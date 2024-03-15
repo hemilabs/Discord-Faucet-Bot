@@ -1,6 +1,6 @@
 # Discord Bot Faucet
 
-This is a Discord Bot that dispenses Testnet ETH written in TypeScript.
+This is a Discord Bot that dispenses testnet coins to Hemi Network developers.
 
 ![CodeSample1](https://i.imgur.com/AYpndSV.png)
 
