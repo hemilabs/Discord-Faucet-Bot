@@ -16,6 +16,7 @@ spec:
       containers:
       - name: discord-bot
         image: hemilabs/discord:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         env:
